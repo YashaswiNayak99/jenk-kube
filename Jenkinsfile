@@ -6,11 +6,6 @@ pipeline {
    }
    stages {
        stage('Build') {
-           agent {
-               docker {
-                   image 'python:3.8.6-slim'
-               }
-           }
            steps {
                sh 'docker build -t yashdock90/pytestimg .'
            }
