@@ -27,7 +27,7 @@ pipeline {
            steps {
                script{
                    def image_id = registry + ":$BUILD_NUMBER"
-                   sh "ansible-playbook  plays/deploy.yaml --extra-vars \"image_id=${image_id}\""
+                   sh "ansible-playbook  plays/playbook.yaml --extra-vars \"image_id=${image_id}\" -e \"ansible_python_interpreter=/usr/bin/python3\""
                }
            }
        }
