@@ -1,8 +1,7 @@
 pipeline {
    agent any
    environment {
-       registry = "magalixcorp/k8scicd"
-       GOCACHE = "/tmp"
+       registry = "yashdock90"
    }
    stages {
        stage('Build') {
