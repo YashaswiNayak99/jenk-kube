@@ -1,12 +1,12 @@
 pipeline {
    agent any
    environment {
-       registry = "yashdock90"
+       registry = "yashdock90/jenks-kube-test"
    }
    stages {
        stage('Build') {
            steps {
-               sh 'docker build -t yashdock90/pytestimg .'
+               sh 'docker build -t pytestimg .'
            }
        }
        stage('Publish') {
